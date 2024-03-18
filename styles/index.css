@@ -219,7 +219,13 @@ section{
     justify-content: center;
     align-items: center;
     margin: 1rem;
+}
 
+.side-feature{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
     
 input {
