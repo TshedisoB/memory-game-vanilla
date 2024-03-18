@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+  background: #407a41;  
+  color: white;
+}
+
+body{
+    background-color:#caadef;
+    height: 100%; 
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.body-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow-x: visible;
+    overflow-y: auto;
+}
+
+h1 {
+    text-align:center;
+    text-decoration: underline;
+    font-size: 2.5em;
+    color: rgb(7, 6, 89);
+    margin: 1rem;
+}
+
+section{
+    display: grid;
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    perspective: 50rem;
+}
+
+.card{
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  background-color: #fff;
+  display: flex;
+}
+
+.front{
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  pointer-events: none;
+}
+
+.back{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(9, 0, 67);
+    border-radius: 0.5rem;
+    position: absolute;
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+
+.flipCard {
+    transform: rotateY(180deg);
+} 
+
+.flipsContainer { display: grid;
+    border: 4px solid rgb(34, 117, 11);
+    border-radius: 0.5rem;
+    background-color: white;
+    position: relative;
+    padding: 0.5rem;
+    margin: 0.7rem;
+}
+
+.flippedCards { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:2px solid rgb(71, 3, 144);
+    border-radius: 0.5rem;
+    margin: 0.6rem;
+    padding: 0.6rem;
+    background-color: rgb(71, 3, 144); 
+    color: white;
+}
+
+.timer { display: grid;
+    border: 4px solid rgb(34, 117, 11);
+    border-radius: 0.5rem;
+    background-color: white;
+    position: relative;
+    padding: 0.5rem;
+    margin: 0.7rem;
+}
+
+.timerCounter { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:2px solid rgb(71, 3, 144);
+    border-radius: 0.5rem;
+    margin: 0.6rem;
+    padding: 0.6rem;
+    background-color: rgb(71, 3, 144); 
+    color: white;
+}
+ 
+#minutes,
+#seconds {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.flipsContainer { display: grid;
+    border: 4px solid rgb(34, 117, 11);
+    border-radius: 0.5rem;
+    background-color: white;
+    position: relative;
+    padding: 0.5rem;
+    margin: 0.7rem;
+}
+
+.flippedCards { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:2px solid rgb(71, 3, 144);
+    border-radius: 0.5rem;
+    margin: 0.6rem;
+    padding: 0.6rem;
+    background-color: rgb(71, 3, 144); 
+    color: white;
+} 
+
+.customGrid {
+    display: grid;
+    border: 4px solid rgb(34, 117, 11);
+    border-radius: 0.5rem;
+    background-color: white;
+    position: relative;
+    width: min-content;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.gridHeading {
+    display: flex;
+    justify-content: center;
+    color: rgb(7, 6, 89);
+    text-decoration: underline;
+}
+
+.dimensions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rows,
+.columns{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border:2px solid rgb(71, 3, 144);
+    border-radius: 0.5rem;
+    margin: 0.6rem;
+    padding: 0.6rem;
+}
+
+#gridButton,
+#resetGameButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(71, 3, 144);
+    border: 2px solid rgb(71, 3, 144);
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.6rem;
+    margin: 0.6rem;
+    cursor: pointer;
+}
+
+#resetGameButton:hover {
+    background-color: rgb(194, 0, 0);
+    border: 2px solid rgb(194, 0, 0)
+}
+
+#gridButton:hover {
+    background-color: rgb(34, 117, 11);
+    border: 2px solid rgb(34, 117, 11);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+    
+input {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px ) {    
+    body { 
+        width: 50rem; 
+        overflow: auto;
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+    }
+    section {
+        width: 100%;
+        height: 100%; 
+    }    
+    abbr {
+        display: none;
+    } 
+}
+
+@media (max-width: 680px ) { 
+    body { 
+        width: 50rem; 
+        overflow: auto;
+    }
+}
+ 
+@media (max-width: 375px) { 
+    body { 
+        width: 50rem; 
+        overflow: auto;
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+    }
+    .front {
+        width: 100%;
+        height: 100%;
+    }
+    .back {
+        width: 100%;
+        height: 100%;
+    }
+    .customGrid { 
+        height: auto;
+    }
+    .gridHeading {
+        font-size: 1.5rem;
+    }
+    .dimensions {
+        display: flex;
+        flex-direction: column; 
+    }
+    .rows,
+    .columns {
+        margin: 0.5rem;
+        padding: 0.3rem;
+        display: grid;
+    }
+    #gridButton,
+    #resetGameButton { 
+        height: auto;
+        font-size: 1rem;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+    abbr {
+        display: none;
+    }
+}
