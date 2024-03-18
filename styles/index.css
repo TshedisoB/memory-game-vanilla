@@ -213,6 +213,14 @@ section{
     align-items: center;
     margin: 1rem;
 }
+
+.features{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+
+}
     
 input {
     font-size: 1rem;

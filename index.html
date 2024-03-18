@@ -8,11 +8,16 @@
     <link rel="stylesheet" href="./styles/index.css">
     <title>Memory Web Game</title>
 </head>
-<body> 
-
+<body>
+  <div class="body-content">
+    <div class="heading">
+      <h1>Memory Web App Game</h1> 
+        <section></section> 
+    </div>
 
     <div class="customGrid"> 
       <h2 class="gridHeading">Custom Grid_  
+        <abbr title="Choose a number between 2 and 6 for both grids. Product of row and column must not be odd."> &#9432;</abbr>                                                                                                
       </h2> 
 
       <div class="dimensions">
@@ -29,9 +34,26 @@
 
       <div class="buttons">
         <button id="gridButton">Create Grid</button>
+        <button id="resetGameButton">Reset Game</button>
       </div>
-    </div> 
+    </div>
     
+    <div class="features">
+      <div class="flipsContainer">
+        <h2>Flipped Cards</h2> 
+        <div class="flippedCards">
+          <h3 id="flippedCardsNum">0</h3>
+        </div>
+      </div>
+      
+      <div class="timer">
+        <h2>Timer</h2> 
+        <div class="timerCounter">
+          <h3 id="minutes">00</h3>:<h3 id="seconds">00</h3>
+        </div>
+      </div>
+      
+    </div>
   </div>
 
 <script src="dist/main.js" type="module" defer></script>
